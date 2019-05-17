@@ -140,6 +140,10 @@ module GoodData
       data['id'] = new_id
     end
 
+    def default_data_product_id
+      'default'
+    end
+
     def create_segment(data)
       segment = GoodData::Segment.create(data, domain: domain, client: domain.client)
       segment.data_product = self
